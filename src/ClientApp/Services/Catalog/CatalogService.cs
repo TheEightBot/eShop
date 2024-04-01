@@ -12,7 +12,7 @@ public class CatalogService : ICatalogService
     private readonly IRequestProvider _requestProvider;
     private readonly IFixUriService _fixUriService;
 
-    private const string ApiUrlBase = "api/v1/Catalog";
+    private const string ApiUrlBase = "catalog-api/api/v1/Catalog";
 
     public CatalogService(ISettingsService settingsService, IRequestProvider requestProvider, IFixUriService fixUriService)
     {

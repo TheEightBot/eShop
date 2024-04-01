@@ -131,10 +131,11 @@ public class IdentityService : IIdentityService
         return new OidcClient(
             new()
             {
-                Authority = _settingsService.IdentityEndpointBase,
+                Authority = Path.Combine(_settingsService.IdentityEndpointBase, "identity-api"),
                 ClientId = _settingsService.ClientId,
                 ClientSecret = _settingsService.ClientSecret,
                 Scope = "openid profile basket orders offline_access",
+                RefreshDiscoveryDocumentForLogin = false,
                 RedirectUri = _settingsService.CallbackUri,
                 PostLogoutRedirectUri = _settingsService.CallbackUri,
                 Browser = _browser,

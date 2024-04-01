@@ -180,12 +180,12 @@ public class SettingsViewModel : ViewModelBase
         IdentityEndpoint = 
             !string.IsNullOrEmpty(_settingsService.IdentityEndpointBase) 
                 ? _settingsService.IdentityEndpointBase 
-                : "https://localhost:5243";
+                : "http://localhost:11632";
         
         GatewayCatalogEndpoint = 
             !string.IsNullOrEmpty(_settingsService.GatewayCatalogEndpointBase) 
                 ? _settingsService.GatewayCatalogEndpointBase 
-                : "http://localhost:5222";
+                : "http://localhost:11632";
         
         GatewayBasketEndpoint = 
             !string.IsNullOrEmpty(_settingsService.GatewayBasketEndpointBase) 
@@ -195,7 +195,7 @@ public class SettingsViewModel : ViewModelBase
         GatewayOrdersEndpoint = 
             !string.IsNullOrEmpty(_settingsService.GatewayOrdersEndpointBase) 
                 ? _settingsService.GatewayOrdersEndpointBase 
-                : "http://localhost:5224";
+                : "http://localhost:11632";
 
         ToggleMockServicesCommand = new RelayCommand(ToggleMockServices);
 

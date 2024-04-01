@@ -16,7 +16,7 @@ public class OrderService : IOrderService
     private readonly ISettingsService _settingsService;
     private readonly IRequestProvider _requestProvider;
 
-    private const string ApiUrlBase = "/api/v1/orders";
+    private const string ApiUrlBase = "order-api/api/v1/orders";
 
     public OrderService(IIdentityService identityService, ISettingsService settingsService, IRequestProvider requestProvider)
     {

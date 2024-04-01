@@ -57,6 +57,8 @@ var webHooksApi = builder.AddProject<Projects.Webhooks_API>("webhooks-api")
 // Reverse proxies
 builder.AddProject<Projects.Mobile_Bff_Shopping>("mobile-bff")
     .WithReference(catalogApi)
+    .WithReference(orderingApi)
+    .WithReference(basketApi)
     .WithReference(identityApi);
 
 // Apps

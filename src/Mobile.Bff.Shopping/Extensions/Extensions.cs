@@ -6,6 +6,7 @@
 
         builder.Services.AddHealthChecks()
             .AddUrlGroup(new Uri("http://catalog-api/health"), name: "catalogapi-check")
+            .AddUrlGroup(new Uri("http://order-api/health"), name: "orderapi-check")
             .AddUrlGroup(new Uri("http://identity-api/health"), name: "identityapi-check");
     }
 }
